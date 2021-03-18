@@ -6,7 +6,7 @@ code {
     background-color: rgba(27, 31, 35, 0.05);
     font-family: "Operator Mono", Consolas, Monaco, Menlo, monospace;
     word-break: break-all;
-    color: #ef5777;
+    color: #009688;
 }
 
 .post-body h2 {
@@ -19,18 +19,18 @@ code {
   font-size: 1.2em;
 }
 
-.post-body p a{
-  color: #ef5777;
+p a{
+  color: #009688;
   border-bottom: none;
-  border-bottom: 1px solid #ef5777;
+  border-bottom: 1px solid #009688;
   &:hover {
-    color: #fc6423;
+    color: #8e24aa;
     border-bottom: none;
-    border-bottom: 1px solid #fc6423;
+    border-bottom: 1px solid #8e24aa;
   }
 }
 
-.post-body strong {
+.post-body u {
     display: inline;
     padding: 0.2em 0.6em 0.3em;
     font-size: 80%;
@@ -41,14 +41,21 @@ code {
     white-space: nowrap;
     vertical-align: baseline;
     border-radius: 5px;
-    background-color: #ef5777;
+    background-color: #8e24aa;
 }
 
-.post-body u {
-    font-weight: bold;
-    text-decoration: none;
+.post-body strong {
+    color:#009688;
 }
 
+.sidebar-nav .sidebar-nav-active {
+    border-bottom-color: #a7ffeb;
+    color: #a7ffeb;
+}
+.post-toc .nav .active > a {
+    border-bottom-color: #a7ffeb;
+    color: #a7ffeb;
+}
 
 table {
   border-collapse: collapse;
@@ -59,14 +66,3 @@ table {
   margin-left:15%;
   margin-right:15%;
 }
-
-.post-body p a{
-    color: #0593d3;
-    border-bottom: none;
-    border-bottom: 1px solid #0593d3;
-    &:hover {
-      color: #fc6423;
-      border-bottom: none;
-      border-bottom: 1px solid #fc6423;
-    }
- }
