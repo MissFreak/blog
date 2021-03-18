@@ -278,7 +278,7 @@ reward:
 follow_me:
   # 知乎: https://www.zhihu.com/people/tu-tu-70-60-86 || fa fa-book
   # GitHub: https://github.com/MissFreak || fab fa-github
-  # 微信: /images/wechat_channel.jpg || fab fa-weixin
+  微信: /images/wechat_channel.jpg || fab fa-weixin
   # 博客园: https://www.cnblogs.com/tuyuge/ || fa fa-blog
   #RSS: /atom.xml || fa fa-rss
 
