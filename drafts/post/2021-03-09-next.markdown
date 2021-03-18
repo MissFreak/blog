@@ -1,0 +1,27 @@
+---
+layout: "post"
+title: "Hexo Next主题配置汇总"
+date: "2021-03-09 09:28"
+tags:
+- hexo
+- markdown
+---
+
+2021年3月10日博客配置完毕。在此记录网上有关hexo主题和markdown的教程。
+
+<!-- more -->
+<br />
+
+文章置顶：
+https://juejin.cn/post/6844904037465194503
+
+图片操作：
+https://davidwells.io/snippets/how-to-align-images-in-markdown
+https://www.w3schools.com/html/html_images.asp
+
+其他美化：
+https://huangpiao.tech/2019/01/24/Hexo%E5%8D%9A%E5%AE%A2%E4%BC%98%E5%8C%96%E4%B9%8BNext%E4%B8%BB%E9%A2%98%E7%BE%8E%E5%8C%96/
+
+Markdown进阶：
+
+https://blog.csdn.net/thither_shore/article/details/52181464

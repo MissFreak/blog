@@ -1,11 +1,11 @@
-<!-- ---
+---
 title: Python开发环境搭建：Atom
 categories:
 - python
 tags:
 - python
-- 工具
---- -->
+url: https://zhuanlan.zhihu.com/p/354278905
+---
 
 ![](https://i.loli.net/2021/03/04/9LQRKVMfGP2gzTX.jpg)
 

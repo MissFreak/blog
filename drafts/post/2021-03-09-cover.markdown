@@ -1,0 +1,23 @@
+---
+layout: "post"
+title: "欢迎来到我的自然语言处理笔记！"
+date: "2021-03-09 09:23"
+top: true
+---
+<!-- <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=380 height=110 src="//music.163.com/outchain/player?type=0&id=2332757001&auto=1&height=90"></iframe> -->
+
+<center>
+『 好奇心造就诗人与科学家。』
+
+在这里，我疯狂探索语言与机器的奥秘，把毕生的知识与经验，记录在册！
+
+<font color=gray size=4>关注公众号：鸽婆打字机！
+风里雨里，鸽鸽陪你~</font>
+
+</center>
+
+<img align="center" width="120" height="120" alt="微信公众号：鸽婆打字机" src="https://i.loli.net/2021/03/04/dXVUZiRfW2o7wCy.jpg">
+
+<center>
+以下是最新文章：
+</center>

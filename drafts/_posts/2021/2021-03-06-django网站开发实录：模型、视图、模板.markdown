@@ -1,0 +1,62 @@
+---
+layout: "post"
+title: "Django网站开发实录：模型、视图、模板"
+date: "2021-03-06 16:33"
+---
+
+# 编写视图（views）
+打开文件idiom/views.py ，加入以下Python代码：
+```python
+def index(request):
+    return HttpResponse("Hello, world. You're at the idiom index.")
+```
+要调用该视图，我们需要将其映射到URL，为此，我们需要一个URL配置（URLconf），它相当于网站的目录，也就是URL模式与视图函数之间的映射表。
+
+我们在idiom应用的目录下创建一个名为urls.py的文件，windows操作如下：
+
+```
+type nul>urls.py
+```
+看看现在的应用目录：
+```
+idiom/
+    __init__.py
+    admin.py
+    apps.py
+    migrations/
+        __init__.py
+    models.py
+    tests.py
+    urls.py
+    views.py
+```
+然后在idiom/urls.py文件中加入以下代码：
+```
+from django.urls import path
+
+from . import views
+
+urlpatterns = [
+    path('', views.index, name='index'),
+]
+```
+下一步是将根URLconf（mysite/urls.py）指向该idiom.urls模块。我们打开mysite/urls.py，修改为：
+
+```python
+from django.contrib import admin
+from django.urls import include, path
+
+urlpatterns = [
+    path('idiom/', include('idiom.urls')),
+    path('admin/', admin.site.urls),
+]
+```
+
+该include()功能允许引用其他URLconf，这样我们就将index视图连接到了URLconf。
+
+注意;除了admin.site.urls，我们引用其他URL模式时，都应使用include()。
+
+验证下是否正常运行：
+```
+python manage.py runserver
+```

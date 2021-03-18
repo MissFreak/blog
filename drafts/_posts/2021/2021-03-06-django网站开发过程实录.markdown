@@ -1,0 +1,100 @@
+---
+layout: "post"
+title: "Django网站开发过程实录"
+date: "2021-03-06 14:51"
+---
+
+
+# 环境搭建与工具安装
+_完整步骤参考：https://stormsha.com/article/2026/_
+
+我们需要在合适的目录内创建一个虚拟环境（用virtualenv, virtualenvwrapper皆可，参考[virtualenvwrapper的使用](https://blog.csdn.net/a200822146085/article/details/89048172)）。
+
+在该虚拟环境，安装django和psycopg2工具包（用于管理PostgreSQL数据库）。
+
+```bash
+pip install virtualenv, virtualenvwrapper-win
+mkvirtualenv webdev
+workon webdev
+pip install django
+pip install psycopg2
+pip list
+pip freeze
+deactivate
+```
+_PostgreSQL的安装步骤参考：https://www.runoob.com/postgresql/windows-install-postgresql.html_
+
+打开后设置语言为中文，然后关闭。
+
+# 创建项目（project）
+
+下面在虚拟环境webdev内创建一个项目mysite，这是我们所建立的网站上所有应用程序的集合，共用一套数据库配置。
+
+```
+cd webdev
+django-admin startproject mysite
+```
+我们看到新建了一个目录：
+
+```
+mysite/
+    manage.py
+    mysite/
+        __init__.py
+        settings.py
+        urls.py
+        asgi.py
+        wsgi.py
+```
+其中，settings.py和urls.py这两个文件是我们以后需要经常修改的。
+
+# 启动服务器（server）
+
+启动服务器，服务器会监测你的代码更新并自动加载，所以无须重启才看到效果：
+```
+cd mysite
+python manage.py runserver
+```
+在settings.py内将语言改成中文，时区改为上海：
+```
+LANGUAGE_CODE = 'zh-hans'
+
+TIME_ZONE = 'Asia/Shanghai'
+```
+刷新浏览器看到中文页面。
+
+我们可以指定服务器的端口和IP地址。比如，把地址设为自己的IP地址（例如192.168.1.110）或0.0.0.0，让网络上的其他计算机可见。
+
+栗子：
+```
+python manage.py runserver 0.0.0.0:8000
+```
+使用Windows的用户用ipconfig命令获取本地网络中的IP 地址，然后复制到setting.py中，比如我是这个：
+```python
+ALLOWED_HOSTS = ['192.168.1.110']
+```
+于是，在其他电脑或手机浏览器打开 http://192.168.1.110:8000/ 就可以访问啦！完美！
+
+# 创建应用程序（APP）
+
+**项目和应用的区别：**
+- **应用**是用于执行某项具体操作的程序，**项目**是特定网站的配置和应用程序的集合。
+- 一个项目可以包含多个应用程序，一个应用程序可以用在多个项目中。
+
+应用放在任意路径都可以，但我们一般放在manage.py文件相同的目录中。我会创建一个成语检索的app：
+
+```
+python manage.py startapp idiom
+```
+看看这个应用程序下面有哪些文件：
+```
+idiom/
+    __init__.py
+    admin.py
+    apps.py
+    migrations/
+        __init__.py
+    models.py
+    tests.py
+    views.py
+```

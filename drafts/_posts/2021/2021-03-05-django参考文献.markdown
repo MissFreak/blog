@@ -1,0 +1,17 @@
+---
+layout: "post"
+title: "Django参考文献"
+date: "2021-03-05 22:23"
+---
+# 参考文献
+https://docs.djangoproject.com/en/3.1/
+
+https://www.w3cschool.cn/django/
+
+https://stormsha.com/
+
+http://djangobook.py3k.cn/
+
+https://www.runoob.com/django/django-intro.html
+
+https://www.liujiangblog.com/course/django/84
